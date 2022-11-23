@@ -14,19 +14,19 @@ exports.prepare = function(){
     });
 }
 
-exports.getCPA = function(){
+exports.getBSD = function(){
     return new Promise(function(resolve, reject){
         setTimeout(function(){
-            console.log("Get All CPA Students");
+            console.log("Get All BSD Students");
             var temp;
-            const cpaList = [];
-            for(cpa of studentInfo){
-                if(cpa.program == "CPA"){
-                    temp = cpa;
-                    cpaList.push(temp);
+            const BSDList = [];
+            for(BSD of studentInfo){
+                if(BSD.program == "BSD"){
+                    temp = BSD;
+                    BSDList.push(temp);
                 }
             }
-            resolve(cpaList);
+            resolve(BSDList);
         },randomTime);
     });
 }
@@ -43,6 +43,21 @@ exports.highGPA = function(){
                 }
             }
             resolve(highest);
+        },randomTime);
+    });
+}
+
+exports.allStudents = function(){
+    return new Promise(function(resolve, reject){
+        setTimeout(function(){
+            console.log("Get All Students");
+            var temp;
+            const List = [];
+            for(cpa of studentInfo){
+                    temp = cpa;
+                    List.push(temp);
+            }
+            resolve(List);
         },randomTime);
     });
 }

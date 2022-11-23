@@ -1,0 +1,42 @@
+ <style>
+    table {
+    table-layout: auto;
+    width: 100%;   
+}
+th,td {
+    border-style: solid;
+    border-width: 2px;
+    border-color: hsl(0, 0%, 0%);
+    word-wrap: break-word;
+    text-align: center;
+}
+ </style>
+ <div class="row">
+ <div class="col-md-12">
+ <h2>Student List:</h2>
+            <div class = "table-responsive">
+            <table class = "table">
+                <thead>
+                    <tr> 
+                        <th> Student Id </th>
+                        <th> Name </th>
+                        <th> Program </th>
+                        <th> GPA </th>
+                    </tr>
+                </thead>
+                <tbody>
+    {{#each students}}
+                         <tr>
+                            <td> {{studId}} </td>
+                            <td> {{name}} </td>
+                            <td> {{program}} </td>
+                            <td> {{gpa}} </td>
+                         </tr>
+    {{else}}
+ <strong>{{message}}</strong>
+ </div>
+    {{/each}}
+    </tbody>
+    </table>
+    </div>
+    </div>
